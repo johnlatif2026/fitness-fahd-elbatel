@@ -9,10 +9,13 @@
 <!-- favicon -->
 <link rel="icon" href="https://i.postimg.cc/4dHKD2bb/IMG-20260329-WA0022.jpg">
 
+<!-- Google Fonts Arabic -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
 body {
   margin: 0;
-  font-family: Arial;
+  font-family: 'Cairo', Arial, sans-serif;
   background: #0f172a;
   color: white;
   direction: rtl;
@@ -35,6 +38,11 @@ header {
               linear-gradient(135deg, #38bdf8, #6366f1) border-box;
 
   box-shadow: 0 0 25px rgba(56,189,248,0.6);
+  transition: transform 0.3s ease;
+}
+
+.profile-container img:hover {
+  transform: scale(1.05);
 }
 
 /* SECTIONS */
@@ -48,39 +56,53 @@ section {
 h2 {
   border-bottom: 2px solid #38bdf8;
   padding-bottom: 5px;
+  font-size: 1.3rem;
 }
 
 /* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
 }
 
 .card {
   background: #334155;
-  padding: 10px;
+  padding: 15px;
   border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* INPUT */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* INPUT & BUTTON */
 input {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border-radius: 10px;
   border: none;
   margin-top: 10px;
+  font-size: 1rem;
 }
 
 button {
   margin-top: 10px;
-  padding: 10px;
+  padding: 12px;
   width: 100%;
   background: #38bdf8;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #22c1ff;
 }
 
 /* FOOTER */
@@ -89,9 +111,31 @@ footer {
   padding: 15px;
   background: #020617;
   margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 600px) {
+  .profile-container img {
+    width: 90px;
+    height: 90px;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .card {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  input, button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
 }
 </style>
-
 </head>
 
 <body>
