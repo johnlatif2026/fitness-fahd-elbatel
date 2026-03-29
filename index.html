@@ -1,83 +1,115 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FITNESS-FAHD-ELBATEL</title>
-  <link rel="icon" href="https://i.postimg.cc/4dHKD2bb/IMG-20260329-WA0022.jpg" alt="profile">
-  <style>
-    body {
-      font-family: Arial;
-      margin: 0;
-      background: #0f172a;
-      color: white;
-      direction: rtl;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    header {
-      text-align: center;
-      padding: 20px;
-      background: #1e293b;
-    }
+<title>FITNESS-FAHD-ELBATEL</title>
 
-    header img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-    }
+<!-- favicon -->
+<link rel="icon" href="https://i.postimg.cc/4dHKD2bb/IMG-20260329-WA0022.jpg">
 
-    h1 {
-      margin: 10px 0;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+  direction: rtl;
+}
 
-    section {
-      padding: 20px;
-      margin: 10px;
-      background: #1e293b;
-      border-radius: 15px;
-    }
+/* HEADER */
+header {
+  text-align: center;
+  padding: 20px;
+}
 
-    h2 {
-      border-bottom: 2px solid #38bdf8;
-      padding-bottom: 5px;
-    }
+.profile-container img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 10px;
-    }
+  border: 4px solid transparent;
+  background: linear-gradient(#0f172a, #0f172a) padding-box,
+              linear-gradient(135deg, #38bdf8, #6366f1) border-box;
 
-    .card {
-      background: #334155;
-      padding: 10px;
-      border-radius: 10px;
-    }
+  box-shadow: 0 0 25px rgba(56,189,248,0.6);
+}
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #020617;
-      margin-top: 20px;
-    }
-  </style>
+/* SECTIONS */
+section {
+  margin: 15px;
+  padding: 15px;
+  background: #1e293b;
+  border-radius: 15px;
+}
+
+h2 {
+  border-bottom: 2px solid #38bdf8;
+  padding-bottom: 5px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.card {
+  background: #334155;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* INPUT */
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  background: #38bdf8;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #020617;
+  margin-top: 20px;
+}
+</style>
+
 </head>
 
 <body>
 
 <header>
-  <!-- حط صورة الشخص هنا -->
-  <img src="https://i.postimg.cc/4dHKD2bb/IMG-20260329-WA0022.jpg" alt="profile">
+  <div class="profile-container">
+    <img src="https://i.postimg.cc/4dHKD2bb/IMG-20260329-WA0022.jpg">
+  </div>
   <h1>FAHD-ELBATEL</h1>
 </header>
 
-<!-- جدول الأسبوع -->
+<!-- جدول -->
 <section>
   <h2>📅 جدول الأسبوع</h2>
   <div class="grid">
     <div class="card">السبت: راحة</div>
-    <div class="card">الأحد: تمرين ضغط</div>
-    <div class="card">الإثنين: تمرين سحب</div>
+    <div class="card">الأحد: ضغط</div>
+    <div class="card">الإثنين: سحب</div>
     <div class="card">الثلاثاء: أرجل</div>
     <div class="card">الأربعاء: كارديو</div>
     <div class="card">الخميس: تمرين كامل</div>
@@ -85,50 +117,98 @@
   </div>
 </section>
 
-<!-- نظام الأكل -->
+<!-- نظام الاكل -->
 <section>
   <h2>🍽️ نظام الأكل</h2>
 
-  <h3>🔹 الأيام 1 - 7 (240 جم كارب)</h3>
+  <p><b>أيام 1-7 (240 كارب)</b></p>
   <p>
-    الوجبة 1: 4 بيض + 60 شوفان + لبن + موزة<br>
-    الوجبة 2: 150 دجاج + 100 رز + لوز + سلطة<br>
-    الوجبة 3: لحم/دجاج/تونة + رز + لوز + سلطة<br>
-    الوجبة 4: 165 جبنة قريش + 100 بطاطا
+  4 بيض + شوفان + موزة<br>
+  دجاج + رز + لوز<br>
+  لحم/تونة + رز<br>
+  جبنة قريش + بطاطا
   </p>
 
-  <h3>🔹 الأيام 8 - 10 (180 جم كارب)</h3>
+  <p><b>أيام 8-10 (180 كارب)</b></p>
   <p>
-    الوجبة 1: 4 بيض + شوفان + لبن + تفاحة<br>
-    الوجبة 2: دجاج + 75 رز + فول سوداني<br>
-    الوجبة 3: دجاج + 50 رز + فول سوداني<br>
-    الوجبة 4: جبنة قريش + بطاطس
+  4 بيض + شوفان + تفاحة<br>
+  دجاج + رز أقل<br>
+  جبنة + بطاطس
   </p>
-
-  <p>💧 الماء: 5 لتر يوميًا</p>
-  <p>🧂 ملح: 5 جم</p>
 </section>
 
 <!-- الكارديو -->
 <section>
   <h2>🏃 الكارديو</h2>
-  <p>
-    مشي أو سلم مائل 30 دقيقة<br>
-    سرعة 5.5 - 6 بعد التمرين
-  </p>
+  <p>30 دقيقة بعد التمرين (سرعة 5.5 - 6)</p>
 </section>
 
 <!-- المكملات -->
 <section>
   <h2>💊 المكملات</h2>
-  <p>
-    الزنك: 50mg قبل النوم<br>
-    ماغنسيوم: قرص قبل النوم
-  </p>
+  <p>زنك 50mg قبل النوم</p>
+  <p>ماغنسيوم قبل النوم</p>
+</section>
+
+<!-- الوزن -->
+<section>
+  <h2>⚖️ متابعة الوزن</h2>
+
+  <input type="number" id="weightInput" placeholder="اكتب وزنك">
+  <button onclick="saveWeight()">حفظ الوزن</button>
+
+  <h3 id="status"></h3>
+  <div id="history"></div>
 </section>
 
 <footer>
   جميع الحقوق محفوظة © FAHD-ELBATEL
 </footer>
+
+<script>
+let weights = JSON.parse(localStorage.getItem("weights")) || [];
+
+function saveWeight() {
+  let input = document.getElementById("weightInput");
+  let value = parseFloat(input.value);
+
+  if (!value) return;
+
+  weights.push(value);
+  localStorage.setItem("weights", JSON.stringify(weights));
+
+  input.value = "";
+  updateUI();
+}
+
+function updateUI() {
+  let historyDiv = document.getElementById("history");
+  let status = document.getElementById("status");
+
+  historyDiv.innerHTML = "📊 السجل: " + weights.join(" - ");
+
+  if (weights.length < 2) {
+    status.innerText = "";
+    return;
+  }
+
+  let last = weights[weights.length - 1];
+  let prev = weights[weights.length - 2];
+
+  if (last < prev) {
+    status.innerText = "🔥 في تحسن (الوزن بينزل)";
+    status.style.color = "lightgreen";
+  } else if (last > prev) {
+    status.innerText = "⚠️ الوزن بيزيد";
+    status.style.color = "red";
+  } else {
+    status.innerText = "😐 ثابت";
+    status.style.color = "orange";
+  }
+}
+
+updateUI();
+</script>
+
 </body>
 </html>
