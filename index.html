@@ -2,154 +2,249 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>FITNESS-FAHD-ELBATEL</title>
 
 <!-- favicon -->
 <link rel="icon" href="https://i.postimg.cc/4dHKD2bb/IMG-20260329-WA0022.jpg">
 
-<!-- Google Fonts Arabic -->
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<!-- Google Fonts + Font Awesome -->
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <style>
-body {
+* {
   margin: 0;
-  font-family: 'Cairo', Arial, sans-serif;
-  background: #0f172a;
-  color: white;
-  direction: rtl;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* HEADER */
+body {
+  font-family: 'Tajawal', sans-serif;
+  background: linear-gradient(145deg, #0a0f1e 0%, #0f172a 100%);
+  color: #f1f5f9;
+  direction: rtl;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+/* تخصيص شريط التمرير */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1e293b;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #38bdf8;
+  border-radius: 10px;
+}
+
+/* header مع تأثير زجاجي */
 header {
   text-align: center;
-  padding: 20px;
+  padding: 30px 20px 20px;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.3);
+  margin-bottom: 20px;
 }
 
 .profile-container img {
-  width: 110px;
-  height: 110px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-
-  border: 4px solid transparent;
-  background: linear-gradient(#0f172a, #0f172a) padding-box,
-              linear-gradient(135deg, #38bdf8, #6366f1) border-box;
-
-  box-shadow: 0 0 25px rgba(56,189,248,0.6);
+  border: 3px solid rgba(56, 189, 248, 0.6);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
   transition: transform 0.3s ease;
 }
-
 .profile-container img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
-/* SECTIONS */
+header h1 {
+  margin-top: 12px;
+  font-size: 1.9rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff, #38bdf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -0.5px;
+}
+
+/* الأقسام الرئيسية */
 section {
-  margin: 15px;
-  padding: 15px;
-  background: #1e293b;
-  border-radius: 15px;
+  margin: 20px 18px;
+  padding: 18px 20px;
+  background: rgba(30, 41, 59, 0.55);
+  backdrop-filter: blur(4px);
+  border-radius: 28px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  transition: all 0.2s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 h2 {
-  border-bottom: 2px solid #38bdf8;
-  padding-bottom: 5px;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-right: 5px solid #38bdf8;
+  padding-right: 15px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+h2 i {
+  color: #38bdf8;
+  font-size: 1.5rem;
 }
 
-/* GRID */
+/* شبكة البطاقات (جدول الأسبوع) */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
+  gap: 14px;
+  margin-top: 8px;
 }
 
 .card {
-  background: #334155;
-  padding: 15px;
-  border-radius: 10px;
+  background: #1e293bcc;
+  backdrop-filter: blur(4px);
+  padding: 14px 8px;
+  border-radius: 20px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 500;
+  border: 1px solid #334155;
+  transition: all 0.25s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transform: translateY(-4px);
+  border-color: #38bdf8;
+  background: #2d3a55cc;
+  box-shadow: 0 12px 18px -8px rgba(56,189,248,0.3);
 }
 
-/* INPUT & BUTTON */
+/* نظام الأكل - بطاقات منسقة */
+.meal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 10px;
+}
+.meal-card {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  padding: 15px;
+  border-radius: 24px;
+  border-right: 4px solid #38bdf8;
+  transition: 0.2s;
+}
+.meal-card h3 {
+  color: #7dd3fc;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+.meal-card p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+.badge {
+  background: #38bdf822;
+  padding: 6px 12px;
+  border-radius: 40px;
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  border: 1px solid #38bdf866;
+}
+
+/* زر ومتابعة الوزن */
 input {
   width: 100%;
-  padding: 12px;
-  border-radius: 10px;
+  padding: 14px;
+  border-radius: 40px;
   border: none;
-  margin-top: 10px;
+  background: #0f172a;
+  color: white;
   font-size: 1rem;
+  margin: 10px 0 12px;
+  outline: none;
+  text-align: center;
+  font-family: 'Tajawal', sans-serif;
+  border: 1px solid #334155;
+  transition: 0.2s;
+}
+input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px #38bdf880;
 }
 
 button {
-  margin-top: 10px;
+  background: linear-gradient(95deg, #38bdf8, #6366f1);
   padding: 12px;
   width: 100%;
-  background: #38bdf8;
   border: none;
-  border-radius: 10px;
-  cursor: pointer;
+  border-radius: 40px;
   font-weight: bold;
-  transition: background 0.3s ease;
+  font-size: 1rem;
+  cursor: pointer;
+  color: white;
+  transition: 0.2s;
+  font-family: 'Tajawal', sans-serif;
 }
-
 button:hover {
-  background: #22c1ff;
+  transform: scale(0.98);
+  background: linear-gradient(95deg, #2ea5df, #5254e0);
+  box-shadow: 0 5px 15px #38bdf860;
 }
 
-/* FOOTER */
+#history {
+  background: #0f172a80;
+  padding: 12px;
+  border-radius: 20px;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
 footer {
   text-align: center;
-  padding: 15px;
-  background: #020617;
-  margin-top: 20px;
-  font-size: 0.9rem;
+  padding: 20px;
+  background: #020617aa;
+  margin-top: 35px;
+  font-size: 0.85rem;
+  border-top: 1px solid #38bdf822;
 }
 
-/* MEDIA QUERIES */
-@media (max-width: 600px) {
-  .profile-container img {
-    width: 90px;
-    height: 90px;
+/* جعل الصورة متجاوبة */
+@media (max-width: 550px) {
+  section {
+    margin: 14px 12px;
+    padding: 15px;
   }
-
-  h2 {
-    font-size: 1.1rem;
-  }
-
-  .card {
-    padding: 10px;
-    font-size: 0.9rem;
-  }
-
-  input, button {
-    padding: 10px;
-    font-size: 0.9rem;
+  .meal-grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>
 </head>
-
 <body>
 
 <header>
   <div class="profile-container">
-    <img src="https://i.postimg.cc/4dHKD2bb/IMG-20260329-WA0022.jpg">
+    <img src="https://i.postimg.cc/4dHKD2bb/IMG-20260329-WA0022.jpg" alt="صورة البطل FAHD">
   </div>
-  <h1>FAHD-ELBATEL</h1>
+  <h1>⚡ FAHD-ELBATEL ⚡</h1>
 </header>
 
-<!-- جدول -->
+<!-- جدول الأسبوع -->
 <section>
-  <h2>📅 جدول الأسبوع</h2>
+  <h2><i class="fas fa-calendar-alt"></i> جدول الأسبوع</h2>
   <div class="grid">
     <div class="card">السبت: راحة</div>
     <div class="card">الأحد: ضغط</div>
@@ -161,52 +256,51 @@ footer {
   </div>
 </section>
 
-<!-- نظام الاكل -->
+<!-- نظام الأكل بتصميم مطور -->
 <section>
-  <h2>🍽️ نظام الأكل</h2>
-
-  <p><b>أيام 1-7 (240 كارب)</b></p>
-  <p>
-  4 بيض + شوفان + موزة<br>
-  دجاج + رز + لوز<br>
-  لحم/تونة + رز<br>
-  جبنة قريش + بطاطا
-  </p>
-
-  <p><b>أيام 8-10 (180 كارب)</b></p>
-  <p>
-  4 بيض + شوفان + تفاحة<br>
-  دجاج + رز أقل<br>
-  جبنة + بطاطس
-  </p>
+  <h2><i class="fas fa-utensils"></i> نظام الأكل</h2>
+  <div class="meal-grid">
+    <div class="meal-card">
+      <div class="badge">🔥 أيام 1-7 (240 كارب)</div>
+      <p>🍳 4 بيض + شوفان + موزة</p>
+      <p>🍗 دجاج + رز + لوز</p>
+      <p>🥩 لحم/تونة + رز</p>
+      <p>🧀 جبنة قريش + بطاطا</p>
+    </div>
+    <div class="meal-card">
+      <div class="badge">🌀 أيام 8-10 (180 كارب)</div>
+      <p>🍳 4 بيض + شوفان + تفاحة</p>
+      <p>🍗 دجاج + رز (أقل)</p>
+      <p>🧀 جبنة قريش + بطاطس</p>
+      <p>🥑 افطار خفيف</p>
+    </div>
+  </div>
 </section>
 
-<!-- الكارديو -->
+<!-- الكارديو والمكملات في صف مرن؟ أبقيهما منفصلين لكن بتصميم جميل -->
 <section>
-  <h2>🏃 الكارديو</h2>
-  <p>30 دقيقة بعد التمرين (سرعة 5.5 - 6)</p>
+  <h2><i class="fas fa-heartbeat"></i> الكارديو</h2>
+  <p>🏃‍♂️ <strong>30 دقيقة</strong> بعد التمرين (سرعة 5.5 - 6) على المشاية أو الدراجة.</p>
 </section>
 
-<!-- المكملات -->
 <section>
-  <h2>💊 المكملات</h2>
-  <p>زنك 50mg قبل النوم</p>
-  <p>ماغنسيوم قبل النوم</p>
+  <h2><i class="fas fa-pills"></i> المكملات</h2>
+  <p>💊 <strong>زنك 50mg</strong> قبل النوم</p>
+  <p>💊 <strong>ماغنسيوم</strong> قبل النوم</p>
+  <p>🌙 يفضل مع وجبة خفيفة أو قبل النوم بساعة</p>
 </section>
 
-<!-- الوزن -->
+<!-- الوزن مع متابعة -->
 <section>
-  <h2>⚖️ متابعة الوزن</h2>
-
-  <input type="number" id="weightInput" placeholder="اكتب وزنك">
-  <button onclick="saveWeight()">حفظ الوزن</button>
-
-  <h3 id="status"></h3>
+  <h2><i class="fas fa-weight-scale"></i> متابعة الوزن</h2>
+  <input type="number" id="weightInput" placeholder="أدخل وزنك بالكيلوجرام">
+  <button onclick="saveWeight()"><i class="fas fa-save"></i> حفظ الوزن</button>
+  <h3 id="status" style="margin-top: 12px; text-align: center;"></h3>
   <div id="history"></div>
 </section>
 
 <footer>
-  جميع الحقوق محفوظة © FAHD-ELBATEL
+  <i class="fas fa-dumbbell"></i> جميع الحقوق محفوظة © FAHD-ELBATEL 2026
 </footer>
 
 <script>
@@ -216,7 +310,10 @@ function saveWeight() {
   let input = document.getElementById("weightInput");
   let value = parseFloat(input.value);
 
-  if (!value) return;
+  if (isNaN(value) || value <= 0) {
+    alert("يرجى إدخال وزن صحيح");
+    return;
+  }
 
   weights.push(value);
   localStorage.setItem("weights", JSON.stringify(weights));
@@ -227,12 +324,19 @@ function saveWeight() {
 
 function updateUI() {
   let historyDiv = document.getElementById("history");
-  let status = document.getElementById("status");
+  let statusEl = document.getElementById("status");
 
-  historyDiv.innerHTML = "📊 السجل: " + weights.join(" - ");
+  if (weights.length === 0) {
+    historyDiv.innerHTML = "📝 لا توجد بيانات وزن بعد. ابدأ بتسجيل وزنك!";
+    statusEl.innerText = "";
+    return;
+  }
+
+  historyDiv.innerHTML = "📊 سجل الوزنات: " + weights.join("  ←  ");
 
   if (weights.length < 2) {
-    status.innerText = "";
+    statusEl.innerText = "✨ سجل وزن آخر مرة لمقارنة التقدم ✨";
+    statusEl.style.color = "#b9e6ff";
     return;
   }
 
@@ -240,19 +344,18 @@ function updateUI() {
   let prev = weights[weights.length - 2];
 
   if (last < prev) {
-    status.innerText = "🔥 في تحسن (الوزن بينزل)";
-    status.style.color = "lightgreen";
+    statusEl.innerHTML = "🔥 في تحسن ممتاز! الوزن ينزل 🔥";
+    statusEl.style.color = "#a3e635";
   } else if (last > prev) {
-    status.innerText = "⚠️ الوزن بيزيد";
-    status.style.color = "red";
+    statusEl.innerHTML = "⚠️ انتبه: الوزن زاد عن السابق ⚠️";
+    statusEl.style.color = "#f87171";
   } else {
-    status.innerText = "😐 ثابت";
-    status.style.color = "orange";
+    statusEl.innerHTML = "⚖️ الوزن ثابت، استمر بالالتزام ⚖️";
+    statusEl.style.color = "#fbbf24";
   }
 }
 
 updateUI();
 </script>
-
 </body>
 </html>
